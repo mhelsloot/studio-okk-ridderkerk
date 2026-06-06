@@ -9303,10 +9303,10 @@ __metadata:
     "@types/react": "npm:^19.2.14"
     eslint: "npm:^9.28"
     prettier: "npm:^3.5"
-    react: "npm:^19.2.4"
-    react-dom: "npm:^19.2.4"
+    react: "npm:^19.2.2"
+    react-dom: "npm:^19.2.2"
     sanity: "npm:^5.30.0"
-    styled-components: "npm:^6.1.18"
+    styled-components: "npm:^6.0.0"
     typescript: "npm:^5.8"
   languageName: unknown
   linkType: soft
@@ -9886,7 +9886,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^19.2.4, react-dom@npm:^19.2.6":
+"react-dom@npm:^19.2.2, react-dom@npm:^19.2.6":
   version: 19.2.7
   resolution: "react-dom@npm:19.2.7"
   dependencies:
@@ -9994,7 +9994,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^19.2.4, react@npm:^19.2.6":
+"react@npm:^19.2.2, react@npm:^19.2.6":
   version: 19.2.7
   resolution: "react@npm:19.2.7"
   checksum: 10c0/0bd0e2f1bbd4ba97561c6597bf8a5fec05e6476fe61e165c1065598d16668efc6715205599c94d3ddd49d36cb0f21cbf1b9bcc18ee840b805ce222c3e8d558ac
@@ -11121,7 +11121,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-components@npm:^6.1.18":
+"styled-components@npm:^6.0.0":
   version: 6.4.2
   resolution: "styled-components@npm:6.4.2"
   dependencies:
