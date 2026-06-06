@@ -15,15 +15,19 @@
     "sanity"
   ],
   "dependencies": {
+    "@sanity/locale-nl-nl": "^1.1.36",
     "@sanity/vision": "^5.30.0",
     "react": "^19.2.2",
     "react-dom": "^19.2.2",
+    "react-is": "^19.2.7",
     "sanity": "^5.30.0",
-    "styled-components": "^6.0.0"
+    "sanity-plugin-media": "^4.3.0",
+    "styled-components": "^6.1.15"
   },
   "devDependencies": {
     "@sanity/eslint-config-studio": "^6.0.0",
     "@types/react": "^19.2.14",
+    "@types/react-is": "^19",
     "eslint": "^9.28",
     "prettier": "^3.5",
     "typescript": "^5.8"
