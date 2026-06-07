@@ -1,5 +1,15 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
+function formatPreviewDate(date?: string) {
+  if (!date) return undefined
+
+  const [year, month, day] = date.split('-')
+
+  if (!year || !month || !day) return date
+
+  return `${day}-${month}-${year}`
+}
+
 export default defineType({
   name: 'news',
   title: 'Nieuws',
@@ -139,7 +149,7 @@ export default defineType({
     prepare({title, date, media}) {
       return {
         title: title || 'Nieuwsartikel',
-        subtitle: date || undefined,
+        subtitle: formatPreviewDate(date),
         media,
       }
     },

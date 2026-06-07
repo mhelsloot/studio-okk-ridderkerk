@@ -45,7 +45,15 @@ export const structure: StructureResolver = (S) =>
             ]),
         ),
       S.divider(),
-      S.documentTypeListItem('news').title('Nieuws').icon(ComposeIcon),
+      S.listItem()
+        .title('Nieuws')
+        .id('news')
+        .icon(ComposeIcon)
+        .child(
+          S.documentTypeList('news')
+            .title('Nieuws')
+            .defaultOrdering([{field: 'date', direction: 'desc'}]),
+        ),
       S.divider(),
       
       S.listItem()
