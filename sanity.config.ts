@@ -5,6 +5,7 @@ import {visionTool} from '@sanity/vision'
 import {media} from 'sanity-plugin-media'
 import {schemaTypes} from './schemaTypes'
 import {structure} from './structure'
+import {GenerateFullSlugsAction} from './components/GenerateFullSlugsAction'
 
 export default defineConfig({
   name: 'default',
@@ -17,5 +18,14 @@ export default defineConfig({
 
   schema: {
     types: schemaTypes,
+  },
+
+  document: {
+    actions: (prev, ctx) => {
+      if (ctx.schemaType === 'siteStructure') {
+        return [...prev, GenerateFullSlugsAction]
+      }
+      return prev
+    },
   },
 })

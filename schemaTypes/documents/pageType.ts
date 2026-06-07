@@ -28,6 +28,28 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'fullSlug',
+      title: 'Volledige slug',
+      type: 'slug',
+      description: 'Automatisch gegenereerd via "Genereer volledige slugs" in de website structuur.',
+      readOnly: true,
+    }),
+    defineField({
+      name: 'description',
+      title: 'Omschrijving',
+      type: 'text',
+      rows: 3,
+      description: 'Meta-omschrijving voor zoekmachines.',
+    }),
+    defineField({
+      name: 'keywords',
+      title: 'Zoekwoorden',
+      type: 'array',
+      of: [defineArrayMember({type: 'string'})],
+      options: {layout: 'tags'},
+      description: 'Zoekwoorden voor zoekmachines.',
+    }),
+    defineField({
       name: 'blocks',
       title: 'Blokken',
       type: 'array',
@@ -37,7 +59,7 @@ export default defineType({
   preview: {
     select: {
       title: 'title',
-      slug: 'slug.current',
+      slug: 'fullSlug.current',
     },
     prepare({title, slug}) {
       return {

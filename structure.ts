@@ -1,3 +1,4 @@
+import {DocumentsIcon, EarthGlobeIcon, EditIcon, MasterDetailIcon} from '@sanity/icons'
 import type {StructureResolver} from 'sanity/structure'
 import {SiteMapPane} from './components/SiteMapPane'
 
@@ -8,6 +9,7 @@ export const structure: StructureResolver = (S) =>
       S.listItem()
         .title('Website structuur')
         .id('siteStructure')
+        .icon(EarthGlobeIcon)
         .child(
           S.list()
             .title('Website structuur')
@@ -15,10 +17,12 @@ export const structure: StructureResolver = (S) =>
               S.listItem()
                 .title('Sitemap')
                 .id('siteMap')
+                .icon(MasterDetailIcon)
                 .child(S.component(SiteMapPane).id('siteMap').title('Sitemap')),
               S.listItem()
                 .title('Structuur bewerken')
                 .id('editSiteStructure')
+                .icon(EditIcon)
                 .child(
                   S.document()
                     .schemaType('siteStructure')
@@ -28,5 +32,5 @@ export const structure: StructureResolver = (S) =>
             ]),
         ),
       S.divider(),
-      S.documentTypeListItem('page').title('Pagina’s'),
+      S.documentTypeListItem('page').title("Pagina's").icon(DocumentsIcon),
     ])
