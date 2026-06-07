@@ -63,6 +63,20 @@ export default defineType({
       initialValue: false,
     }),
     defineField({
+      name: 'externalUrl',
+      title: 'Externe URL',
+      type: 'url',
+      description: 'Optionele externe URL. Laat leeg voor interne pagina.',
+    }),
+    defineField({
+      name: 'openInNewTab',
+      title: 'Openen in nieuw tabblad',
+      type: 'boolean',
+      description: 'Wanneer aangevinkt, opent de link in een nieuw tabblad.',
+      initialValue: false,
+    }),
+    
+    defineField({
       name: 'blocks',
       title: 'Blokken',
       type: 'array',
