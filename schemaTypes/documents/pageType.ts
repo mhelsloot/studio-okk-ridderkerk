@@ -50,6 +50,19 @@ export default defineType({
       description: 'Zoekwoorden voor zoekmachines.',
     }),
     defineField({
+      name: 'cardImage',
+      title: 'Kaartafbeelding',
+      type: 'image',
+      options: {hotspot: true},
+      description: 'Afbeelding die wordt gebruikt als kaartweergave voor deze pagina.',
+    }),
+    defineField({
+      name: 'showImageOnPage',
+      title: 'Afbeelding tonen op pagina',
+      type: 'boolean',
+      initialValue: false,
+    }),
+    defineField({
       name: 'blocks',
       title: 'Blokken',
       type: 'array',

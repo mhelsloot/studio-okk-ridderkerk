@@ -1,3 +1,4 @@
+import newsType from './documents/newsType'
 import pageType from './documents/pageType'
 import siteStructureType from './documents/siteStructureType'
 import htmlTextBlock from './objects/htmlTextBlock'
@@ -12,6 +13,7 @@ export const schemaTypes = [
   siteStructureType,
   siteSettingsType,
   homepageType,
+  newsType,
   pageType,
   htmlTextBlock,
   photoBlock,

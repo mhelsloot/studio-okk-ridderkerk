@@ -1,4 +1,4 @@
-import {CogIcon, DocumentsIcon, EarthGlobeIcon, EditIcon, HomeIcon, MasterDetailIcon} from '@sanity/icons'
+import {CogIcon, DocumentsIcon, EarthGlobeIcon, EditIcon, HomeIcon, MasterDetailIcon, ComposeIcon} from '@sanity/icons'
 import type {StructureResolver} from 'sanity/structure'
 import {SiteMapPane} from './components/SiteMapPane'
 
@@ -44,6 +44,8 @@ export const structure: StructureResolver = (S) =>
                 ),
             ]),
         ),
+      S.divider(),
+      S.documentTypeListItem('news').title('Nieuws').icon(ComposeIcon),
       S.divider(),
       
       S.listItem()
