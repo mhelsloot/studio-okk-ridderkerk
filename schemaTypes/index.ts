@@ -5,9 +5,13 @@ import levelOnePageItem from './objects/levelOnePageItem'
 import levelThreePageItem from './objects/levelThreePageItem'
 import levelTwoPageItem from './objects/levelTwoPageItem'
 import photoBlock from './objects/photoBlock'
+import homepageType from './singletons/homepageType'
+import siteSettingsType from './singletons/siteSettingsType'
 
 export const schemaTypes = [
   siteStructureType,
+  siteSettingsType,
+  homepageType,
   pageType,
   htmlTextBlock,
   photoBlock,
