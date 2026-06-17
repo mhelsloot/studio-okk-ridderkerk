@@ -53,6 +53,7 @@ export default defineType({
             ],
           },
         }),
+        defineArrayMember({type: 'table'}),
         defineArrayMember({
           name: 'inlineImage',
           title: 'Afbeelding',
