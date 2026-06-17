@@ -77,6 +77,20 @@ export default defineType({
     }),
     
     defineField({
+      name: 'sideBar',
+      title: 'Zijbalk',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Geen', value: 'none'},
+          {title: 'Laatste nieuws item', value: 'latestNewsItem'},
+          {title: '5 Laatste nieuws items', value: 'latestNewsItems'},
+        ],
+        layout: 'dropdown',
+      },
+      initialValue: 'none',
+    }),
+    defineField({
       name: 'blocks',
       title: 'Blokken',
       type: 'array',
