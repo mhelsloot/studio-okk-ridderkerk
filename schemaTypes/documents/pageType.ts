@@ -80,7 +80,11 @@ export default defineType({
       name: 'blocks',
       title: 'Blokken',
       type: 'array',
-      of: [defineArrayMember({type: 'htmlTextBlock'}), defineArrayMember({type: 'photoBlock'})],
+      of: [
+        defineArrayMember({type: 'htmlTextBlock'}),
+        defineArrayMember({type: 'imageNextToTextBlock'}),
+        defineArrayMember({type: 'photoBlock'}),
+      ],
     }),
   ],
   preview: {

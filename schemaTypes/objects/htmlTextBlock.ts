@@ -54,42 +54,6 @@ export default defineType({
           },
         }),
         defineArrayMember({type: 'table'}),
-        defineArrayMember({
-          name: 'inlineImage',
-          title: 'Afbeelding',
-          type: 'image',
-          options: {
-            hotspot: true,
-          },
-          fields: [
-            defineField({
-              name: 'alt',
-              title: 'Alt-tekst',
-              type: 'string',
-              description: 'Korte beschrijving voor toegankelijkheid en SEO.',
-              validation: (rule) => rule.required(),
-            }),
-            defineField({
-              name: 'caption',
-              title: 'Bijschrift',
-              type: 'string',
-            }),
-          ],
-          preview: {
-            select: {
-              title: 'caption',
-              alt: 'alt',
-              media: 'asset',
-            },
-            prepare({title, alt, media}) {
-              return {
-                title: title || alt || 'Afbeelding',
-                subtitle: 'Afbeelding in tekst',
-                media,
-              }
-            },
-          },
-        }),
       ],
       validation: (rule) => rule.required(),
     }),

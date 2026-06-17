@@ -2,6 +2,7 @@ import newsType from './documents/newsType'
 import pageType from './documents/pageType'
 import siteStructureType from './documents/siteStructureType'
 import htmlTextBlock from './objects/htmlTextBlock'
+import imageNextToTextBlock from './objects/imageNextToTextBlock'
 import levelOnePageItem from './objects/levelOnePageItem'
 import levelThreePageItem from './objects/levelThreePageItem'
 import levelTwoPageItem from './objects/levelTwoPageItem'
@@ -16,6 +17,7 @@ export const schemaTypes = [
   newsType,
   pageType,
   htmlTextBlock,
+  imageNextToTextBlock,
   photoBlock,
   levelOnePageItem,
   levelTwoPageItem,
