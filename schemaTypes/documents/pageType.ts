@@ -100,6 +100,12 @@ export default defineType({
         defineArrayMember({type: 'photoBlock'}),
       ],
     }),
+    defineField({
+      name: 'files',
+      title: 'Bestanden',
+      type: 'array',
+      of: [defineArrayMember({type: 'reference', to: [{type: 'fileType'}]})],
+    }),
   ],
   preview: {
     select: {

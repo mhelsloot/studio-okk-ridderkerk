@@ -1,4 +1,4 @@
-import {CogIcon, DocumentsIcon, EarthGlobeIcon, EditIcon, HomeIcon, MasterDetailIcon, ComposeIcon} from '@sanity/icons'
+import {CogIcon, DocumentsIcon, DownloadIcon, EarthGlobeIcon, EditIcon, HomeIcon, MasterDetailIcon, ComposeIcon} from '@sanity/icons'
 import type {StructureResolver} from 'sanity/structure'
 import {SiteMapPane} from './components/SiteMapPane'
 
@@ -55,7 +55,9 @@ export const structure: StructureResolver = (S) =>
             .defaultOrdering([{field: 'date', direction: 'desc'}]),
         ),
       S.divider(),
-      
+      S.documentTypeListItem('fileType').title('Bestanden').icon(DownloadIcon),
+      S.divider(),
+
       S.listItem()
         .title('Website instellingen')
         .id('siteSettings')
