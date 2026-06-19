@@ -85,6 +85,7 @@ export default defineType({
           {title: 'Geen', value: 'none'},
           {title: 'Laatste nieuws item', value: 'latestNewsItem'},
           {title: '5 Laatste nieuws items', value: 'latestNewsItems'},
+          {title: 'Submenu', value: 'subMenu'},
         ],
         layout: 'dropdown',
       },
