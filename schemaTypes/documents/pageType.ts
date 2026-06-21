@@ -92,6 +92,15 @@ export default defineType({
       initialValue: 'none',
     }),
     defineField({
+      name: 'subMenuPage',
+      title: 'Submenu-pagina',
+      type: 'reference',
+      to: [{type: 'page'}],
+      description: 'Selecteer de pagina waarvan het submenu in de zijbalk getoond moet worden.',
+      hidden: ({parent}) => parent?.sideBar !== 'subMenu',
+      options: {disableNew: true},
+    }),
+    defineField({
       name: 'blocks',
       title: 'Blokken',
       type: 'array',
