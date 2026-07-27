@@ -1,3 +1,4 @@
+import {createElement} from 'react'
 import {nlNLLocale} from '@sanity/locale-nl-nl'
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
@@ -7,6 +8,7 @@ import {table} from '@sanity/table'
 import {schemaTypes} from './schemaTypes'
 import {structure} from './structure'
 import {GenerateFullSlugsAction} from './components/GenerateFullSlugsAction'
+import {TableInputWithRowControls} from './components/TableInputWithRowControls'
 
 export default defineConfig({
   name: 'default',
@@ -19,6 +21,17 @@ export default defineConfig({
 
   schema: {
     types: schemaTypes,
+  },
+
+  form: {
+    components: {
+      input: (props) => {
+        if (props.schemaType.name === 'table') {
+          return createElement(TableInputWithRowControls, props as any)
+        }
+        return props.renderDefault(props)
+      },
+    },
   },
 
   document: {

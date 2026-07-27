@@ -109,6 +109,9 @@ export default defineType({
         defineArrayMember({type: 'imageNextToTextBlock'}),
         defineArrayMember({type: 'photoBlock'}),
       ],
+      options: {
+        modal: {type: 'dialog', width: 5},
+      },
     }),
     defineField({
       name: 'files',

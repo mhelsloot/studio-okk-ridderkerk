@@ -1,4 +1,5 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
+import {WideTextInput} from '../../components/WideTextInput'
 
 export default defineType({
   name: 'htmlTextBlock',
@@ -15,6 +16,9 @@ export default defineType({
       name: 'body',
       title: 'Tekst',
       type: 'array',
+      components: {
+        input: WideTextInput,
+      },
       of: [
         defineArrayMember({
           type: 'block',
@@ -53,7 +57,12 @@ export default defineType({
             ],
           },
         }),
-        defineArrayMember({type: 'table'}),
+        defineArrayMember({
+          type: 'table',
+          options: {
+            modal: {type: 'dialog', width: 5},
+          },
+        }),
       ],
       validation: (rule) => rule.required(),
     }),
