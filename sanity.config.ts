@@ -9,6 +9,7 @@ import {schemaTypes} from './schemaTypes'
 import {structure} from './structure'
 import {GenerateFullSlugsAction} from './components/GenerateFullSlugsAction'
 import {TableInputWithRowControls} from './components/TableInputWithRowControls'
+import './components/studio-overrides.css'
 
 export default defineConfig({
   name: 'default',

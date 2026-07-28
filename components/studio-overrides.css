@@ -1,0 +1,9 @@
+/* Bigger publish/draft status dots in structure tool document lists */
+[data-status='published'],
+[data-status='draft'],
+[data-status='asap'],
+[data-status='scheduled'],
+[data-status='undecided'] {
+  width: 10px !important;
+  height: 10px !important;
+}
