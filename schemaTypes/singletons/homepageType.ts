@@ -38,6 +38,48 @@ export default defineType({
       ],
     }),
     defineField({
+      name: 'ctaButton',
+      title: 'CTA button',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'tekst',
+          title: 'Tekst',
+          type: 'string',
+          validation: (rule) =>
+            rule.custom((value, context) => {
+              const parent = context.parent as {link?: string} | undefined
+              return parent?.link && !value ? 'Vul een tekst in voor de button.' : true
+            }),
+        }),
+        defineField({
+          name: 'link',
+          title: 'Link',
+          type: 'url',
+          description: 'Volledige URL (https://...) of intern pad (bijv. /contact).',
+          validation: (rule) =>
+            rule
+              .uri({allowRelative: true, scheme: ['http', 'https', 'mailto', 'tel']})
+              .custom((value, context) => {
+                const parent = context.parent as {tekst?: string} | undefined
+                return parent?.tekst && !value ? 'Vul een link in voor de button.' : true
+              }),
+        }),
+        defineField({
+          name: 'target',
+          title: 'Openen in',
+          type: 'string',
+          options: {
+            list: [
+              {title: 'Hetzelfde tabblad', value: '_self'},
+              {title: 'Nieuw tabblad', value: '_blank'},
+            ],
+          },
+          initialValue: '_self',
+        }),
+      ],
+    }),
+    defineField({
       name: 'afbeelding1',
       title: 'Afbeelding 1',
       type: 'image',

@@ -2,12 +2,12 @@ import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'photoBlock',
-  title: 'Foto',
+  title: 'Afbeelding',
   type: 'object',
   fields: [
     defineField({
       name: 'image',
-      title: 'Foto',
+      title: 'Afbeelding',
       type: 'image',
       options: {
         hotspot: true,
@@ -37,8 +37,8 @@ export default defineType({
     },
     prepare({title, alt, media}) {
       return {
-        title: title || alt || 'Foto',
-        subtitle: 'Fotoblok',
+        title: title || alt || 'Afbeelding',
+        subtitle: 'Afbeeldingblok',
         media,
       }
     },
